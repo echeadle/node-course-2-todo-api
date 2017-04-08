@@ -36,7 +36,7 @@ var nextTodo = new Todo({
 });
 
 nextTodo.save().then((doc) => {
-  console.log('Saved Todo', doc);
+  console.log(JSON.stringify(doc, undefined, 2));
 }, (err) => {
   console.log('Unable to save Todo', err);
 })
