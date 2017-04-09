@@ -45,6 +45,8 @@ http://httpstatuses.com
 // console.log('Cannot add user', err);
 // });
 
+
+$git push heroku master
 $heroku create
 Creating app... done, ⬢ lit-dawn-93034
 https://lit-dawn-93034.herokuapp.com/ | https://git.heroku.com/lit-dawn-93034.git
