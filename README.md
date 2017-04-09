@@ -14,6 +14,8 @@ http://mongoosejs.com/docs/guide.html
 PostMan
 http://getpostman.com
 
+HTTP Statuses
+http://httpstatuses.com
 
 //Model creation Examples
 
