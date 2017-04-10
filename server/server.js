@@ -1,3 +1,4 @@
+require('./config/config')
 
 const _ = require('lodash');
 const express = require('express');
@@ -9,7 +10,7 @@ const {Todo} = require('./models/todo');
 const {User} = require('./models/user');
 
 const app = express();
-const port =process.env.PORT || 3000;
+const port = process.env.PORT;
 
 app.use(bodyParser.json());
 
@@ -48,10 +49,6 @@ app.get('/todos/:id', (req, res) => {
   }).catch((e) =>{
     res.status(400).send();
   })
-});
-
-app.listen(port, () => {
-  console.log(`Started up on port ${port}`);
 });
 
 app.delete('/todos/:id', (req, res) => {
@@ -96,4 +93,9 @@ app.patch('/todos/:id', (req, res) => {
     res(400).send();
   });
 });
+
+app.listen(port, () => {
+  console.log(`Started up on port ${port}`);
+});
+
 module.exports = {app};
